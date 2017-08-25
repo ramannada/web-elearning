@@ -76,19 +76,7 @@
                             @endisset
 
 
-                            {{-- <h3>Lesson Part</h3>
-                            @php
-                                $no =1;
-                            @endphp
-                            <ul class="list-group">
-  <a href="" class="lesson-part"><li class="list-group-item hitam">1. &nbsp;&nbsp;&nbsp;<i class="fa fa-film"  > </i> &nbsp;&nbsp;&nbsp;<span class="hitam">Cras justo odio </span>&nbsp;&nbsp;&nbsp; <span class="badge badge-pill badge-primary" style="color: #fff;">
-                                Video
-                            </span></li></a>
-  <li class="list-group-item">2. &nbsp;&nbsp;&nbsp;<i class="fa fa-film"> </i> &nbsp;&nbsp;&nbsp;Dapibus ac facilisis in</li>
-  <li class="list-group-item">3. &nbsp;&nbsp;&nbsp;<i class="fa fa-film"> </i> &nbsp;&nbsp;&nbsp;Morbi leo risus</li>
-  <li class="list-group-item">4. &nbsp;&nbsp;&nbsp;<i class="fa fa-film"> </i> &nbsp;&nbsp;&nbsp;Porta ac consectetur ac</li>
-  <li class="list-group-item">5. &nbsp;&nbsp;&nbsp;<i class="fa fa-film"> </i> &nbsp;&nbsp;&nbsp;Vestibulum at eros</li>
-</ul> --}}
+     
                          </div>
 
                          <div class="col-3">
@@ -96,9 +84,11 @@
                                  <h5 class="text-center">{{ $lesson->data->type }}</h5>
                                  {{-- <div class="clearfix"></div><br> --}}
                                  <hr>
-                                 <p>Kategori: Umum</p>
-                                 <p>Jumlah Kursus: 26 bagian</p>
-                                 <p>Diterbitkan: 12 Juli 2016</p>
+                                 @isset ($part->data)
+                                    <p>Jumlah Kursus: {{count($part->data)}} bagian</p>
+                                 @endisset
+                                 
+                                 <p>Diterbitkan: {{$lesson->data->published}}</p>
                              </div>
                          </div>
                      </div>
