@@ -6,10 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "cohensive/embed": "dev-master",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "watson/active": "^2.0",
+        "uxweb/sweet-alert": "^1.4",
+        "watson/active": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
